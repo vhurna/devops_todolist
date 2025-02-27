@@ -1,11 +1,11 @@
 ARG PYTHON_VERSION=3.9
-FROM python:${PYTHON_VERSION}-slim as build
+FROM python:${PYTHON_VERSION}-slim
 
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
